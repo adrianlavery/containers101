@@ -1,4 +1,4 @@
-# Apache demo script
+# Docker demo script
 
 ## Create an image
 ```
@@ -22,5 +22,5 @@ docker ps
 
 # Verify we can browse to the web server
 ```
-http:/localhost:8080
+http:/localhost:3000
 ```
