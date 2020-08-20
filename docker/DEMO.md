@@ -24,3 +24,4 @@ docker ps
 ```
 http:/localhost:3000
 ```
+> **Note** if you are using codespaces, ports 3000 and 3001 are forwarded via devcontainer.json
