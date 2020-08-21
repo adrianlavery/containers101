@@ -3,7 +3,7 @@
 ---
 **NOTE**
 
-This demo script is dependent on the [docker demo running](../docker/DEMO.md) running
+This demo script is dependent on the [docker demo running](../DEMO.md) running
 
 ---
 
