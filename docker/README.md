@@ -1,6 +1,6 @@
 # Docker demo script
 
-## Create an image
+## Create an image from the included Dockerfile
 ```
 docker build -t ubuntu:Apache_Server .
 ```
