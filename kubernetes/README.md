@@ -118,3 +118,9 @@ Select Token and paste in the value from `kubectl config view'. Choose Sign in.
 
 
 You can also view the kubernetes resources via the [Azure portal](https://docs.microsoft.com/en-us/azure/aks/kubernetes-portal)
+
+# Clean up resources
+To avoid Azure charges, you should clean up unneeded resources. When the cluster is no longer needed, use the az group delete command to remove the resource group, container service, and all related resources.
+```
+az group delete --name containers101 --yes --no-wait
+```
