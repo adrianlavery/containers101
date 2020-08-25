@@ -104,5 +104,17 @@ Find the external IP address browse to it in your web browser http://[EXTERNAL-I
 # Dashboards
 Browse to the kubernetes dashboard (AKS k8s version < 1.18)
 ```
+# Assign permissions to the dashboard to cluster-user
+kubectl create clusterrolebinding kubernetes-dashboard-cluster-user --clusterrole=cluster-admin --user=clusterUser
+
+# Get a token from the cluster and copy to your clipboard
+kubectl config view
+
+# Open a proxy to the Kubernetes API
 az aks browse --resource-group containers101 --name myAKSCluster
 ```
+If you don't see the dashboard, browse directly to the API http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy  
+Select Token and paste in the value from `kubectl config view'. Choose Sign in.
+
+
+You can also view the kubernetes resources via the [Azure portal](https://docs.microsoft.com/en-us/azure/aks/kubernetes-portal)
