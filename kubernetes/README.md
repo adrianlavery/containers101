@@ -100,3 +100,9 @@ Find the public IP address of the front end
 kubectl get service azure-vote-front --namespace voting-app
 ```
 Find the external IP address browse to it in your web browser http://[EXTERNAL-IP] e.g. http://51.124.72.161
+
+# Dashboards
+Browse to the kubernetes dashboard (AKS k8s version < 1.18)
+```
+az aks browse --resource-group containers101 --name myAKSCluster
+```

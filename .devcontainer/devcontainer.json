@@ -2,7 +2,7 @@
 	"name": "Containers 101",
 	"dockerFile": "Dockerfile",
     "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
-    "forwardPorts": [3000, 3001],
+    "forwardPorts": [3000, 3001, 8001],
 
 	// Use 'settings' to set *default* container specific settings.json values on container create. 
 	// You can edit these settings after create using File > Preferences > Settings > Remote.
