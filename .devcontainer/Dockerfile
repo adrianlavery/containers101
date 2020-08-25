@@ -47,16 +47,6 @@ RUN apt-get install -y apt-transport-https curl gnupg2 lsb-release \
     && apt-get update \
     && apt-get install -y azure-cli
 
-# Install Snapd
-RUN apt-get update \
-    && apt-get install -y snapd \
-    && snap install core
-
-# Install microk8s
-RUN snap install microk8s --classic \
-    && microk8s.status --wait-ready \
-    && microk8s.enable dns dashboard registry
-
 # Install Kubectl
 RUN echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list \
     && curl -sL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - 2>/dev/null \
