@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: azure-vote
+  labels:
+    app: web
+spec:
+  containers:
+    - name: azure-vote-front
+      image: microsoft/azure-vote-front:v1
+      ports:
+        - containerPort: 80
+    - name: azure-vote-back
+      image: redis
+      ports:
+        - containerPort: 6379
