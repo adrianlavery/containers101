@@ -2,11 +2,14 @@
 
 ## Create an AKS cluster
 ```
+# Login to Azure
+az login
+
 # Create a resource group if required
 az group create --location westeurope --name containers101
 
 # Create an AKS cluster. Note this can take around ten minutes
-az aks create --resource-group containers101 --name myAKSCluster --node-count 1 --generate-ssh-keys
+az aks create --resource-group containers101 --name myAKSCluster --node-count 2 --generate-ssh-keys
 ```
 Have a look in the Azure portal and notice that there are two new resource groups. One named 'containers101' which contains your AKS cluster and one named 'MC_containers101_myAKSCluster_westeurope' which contains the cluster nodes in a virtual machine scaleset.
 
