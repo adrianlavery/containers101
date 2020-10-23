@@ -20,7 +20,7 @@ docker run --name Apache_Instance -p 3000:80 -d ubuntu:Apache_Server
 docker ps
 ```
 
-# Verify we can browse to the web server
+# Verify we can browse to the web server on port 3000
 ```
 http:/localhost:3000
 ```
